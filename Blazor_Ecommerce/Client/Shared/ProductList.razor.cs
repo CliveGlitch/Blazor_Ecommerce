@@ -9,9 +9,7 @@ namespace Blazor_Ecommerce.Client.Shared
 
         protected override async Task OnInitializedAsync()
         {
-            var result = await Http.GetFromJsonAsync<List<Product>>("api/Product");
-            if(result is not null)
-                Products = result;
+            await ProductService.GetProduct();
         }
     }
 }
