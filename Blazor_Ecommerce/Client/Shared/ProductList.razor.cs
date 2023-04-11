@@ -9,7 +9,7 @@ namespace Blazor_Ecommerce.Client.Shared
 
         protected override async Task OnInitializedAsync()
         {
-            await ProductService.GetProduct();
+            await ProductService.GetProducts();
         }
     }
 }
